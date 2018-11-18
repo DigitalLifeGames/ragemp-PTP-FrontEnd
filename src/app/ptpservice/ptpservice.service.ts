@@ -16,4 +16,12 @@ export class PTPService {
         })
         .then(data => { return data; });
     }
+    getAdmins() {
+        return this.http.get<any[]>('http://198.12.64.182:3000/db/admins').toPromise()
+        .then(res =>{
+            console.log(res);
+            return <Player[]>res
+        })
+        .then(data => { return data; });
+    }
 }

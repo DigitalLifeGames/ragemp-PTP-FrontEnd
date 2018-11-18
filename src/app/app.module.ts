@@ -11,9 +11,11 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { PTPService } from './ptpservice/ptpservice.service';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
+import { AdminsComponent } from './admins/admins.component';
  
 const appRoutes: Routes = [
   { path: 'leaderboard', component: LeaderboardComponent },
+  { path: 'admins', component: AdminsComponent },
 ];
  
 @NgModule({
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    AdminsComponent
   ],
   providers: [PTPService],
   bootstrap: [ AppComponent ]

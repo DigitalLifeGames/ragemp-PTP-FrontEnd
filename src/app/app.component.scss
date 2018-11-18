@@ -2,7 +2,7 @@
 {
     height:50px;
     width:100%;
-    background-color:teal;
+    background-color:#749696;
 
     p-button
     {
@@ -10,7 +10,14 @@
         margin-top:7px;
         margin-right:10px;
     }
-
+    .logo
+    {
+        height:50px;
+        width:50px;
+        background-image:url('../assets/logo.jpg');
+        background-size:cover;
+        float:left;
+    }
 }
 nav {
     float:left;

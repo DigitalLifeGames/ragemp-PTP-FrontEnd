@@ -17,15 +17,6 @@ export class LeaderboardComponent implements OnInit {
 
   ngOnInit() {
     this.service.getLeaderboard().then(board => board.forEach(b=> this.board.push(b)));
-
-    this.board.push({
-      id: 1,
-      logged: true,
-      locked: true,
-      admin: false,
-      name: "wat",
-      ip: "temp"
-    });
     return;
   }
 
