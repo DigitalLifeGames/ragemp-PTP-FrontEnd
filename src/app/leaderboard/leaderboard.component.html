@@ -1,24 +1,26 @@
-<p-table [value]="board">
-  <ng-template pTemplate="header">
-      <tr>
-          <th>Rank</th>
-          <th>Username</th>
-          <th>Kills</th>
-          <th [pSortableColumn]="board.wins">Wins
-            <p-sortIcon [field]="board.wins"></p-sortIcon>
-          </th>
-          <th>Losses</th>
-          <th>Total Rounds</th>
-      </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-player>
-      <tr>
-          <td>{{player.id}}</td>
-          <td>{{player.username}}</td>
-          <td>{{player.kills}}</td>
-          <td>{{player.wins}}</td>
-          <td>{{player.losses}}</td>
-          <td>{{player.rounds}}</td>
-      </tr>
-  </ng-template>
-</p-table>
+<div id="leaderboard">
+    <p-table [value]="board" sortField="board.wins" sortOrder="1">
+    <ng-template pTemplate="header">
+        <tr>
+            <th [pSortableColumn]="'id'">ID</th>
+            <th>Username</th>
+            <th>Kills</th>
+            <th [pSortableColumn]="'wins'">Wins
+                <p-sortIcon [field]="'wins'"></p-sortIcon>
+            </th>
+            <th>Losses</th>
+            <th>Total Rounds</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-player>
+        <tr>
+            <td>{{player.id}}</td>
+            <td>{{player.username}}</td>
+            <td>{{player.kills}}</td>
+            <td>{{player.wins}}</td>
+            <td>{{player.losses}}</td>
+            <td>{{player.rounds}}</td>
+        </tr>
+    </ng-template>
+    </p-table>
+</div>
