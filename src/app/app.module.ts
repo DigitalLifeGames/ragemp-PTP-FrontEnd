@@ -8,8 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent }          from './app.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
-import {TableModule} from 'primeng/table';
 import { PTPService } from './ptpservice/ptpservice.service';
+import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
  
 const appRoutes: Routes = [
   { path: 'leaderboard', component: LeaderboardComponent },
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     TableModule,
+    ButtonModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
